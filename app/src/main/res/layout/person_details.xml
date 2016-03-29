@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/detail_pic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/person"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/detail_personName"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/personDetails"
+        android:layout_below="@+id/detail_personName"
+        android:layout_marginStart="40dp"/>
+        </RelativeLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center|fill_vertical"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible">
+
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch location sharing"
+                android:id="@+id/switch1" />
+        </LinearLayout>
+</LinearLayout>
+        </LinearLayout>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Directions"
+        android:id="@+id/button"
+        android:onClick="getDirections"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="359dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tv_distance_time" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Syncd 3 hours ago"
+        android:id="@+id/last_seen"
+        android:layout_marginLeft="20dp" />
+
+</LinearLayout>

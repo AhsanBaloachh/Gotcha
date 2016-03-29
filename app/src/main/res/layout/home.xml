@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/Home">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/map"
+        android:focusableInTouchMode="true"
+        android:layout_margin="20dp"
+        android:name="com.google.android.gms.maps.MapFragment"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching your current location..."
+        android:id="@+id/currentLocation"
+        android:textStyle="bold"
+        android:layout_below="@+id/map"
+        android:layout_alignStart="@+id/map"
+        android:layout_marginBottom="10dp" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_refresh"
+        android:layout_below="@+id/currentLocation">
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trustedFriends"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/currentLocation" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Directions"
+        android:id="@+id/directions"
+        android:onClick="getDirections"
+        android:layout_below="@+id/map" />
+</android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
